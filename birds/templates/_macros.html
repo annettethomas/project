@@ -1,15 +1,19 @@
-{% macro show_art(arts) %}
+{% macro show_flight(flights) %}
 <div class="card adjust-height">
   <header class="card-header">
     <div class="card-header-title">
-      <h2>{{ arts['arttitle']}} </h2>
+      <h2>{{ flights['birdName']}} </h2>
     </div>
   </header>
   <div class="card-content" style="padding: 20px;">
     <div class="content">
       <p>
-        <b>{{ arts['artfn'] }} {{ arts['artln']}}</b><br>
-        {{ arts['artdesc'] }}
+        <center><img src="{{ flights['img'] }}" alt="" style="height: 700px;"></center>
+        <b>Scientific Name:</b> {{ flights['sciName'] }}<br>
+        <b>Phylum:</b> {{ flights['phylum']}}<br>
+        <br>
+        <b>Description:</b> {{ flights['desc'] }}<br>
+        <b>Did you know:</b> {{ flights['know'] }}
       </p>
     </div>
   </div>
@@ -17,11 +21,11 @@
 <br>
 {% endmacro %}
 
-{% macro show_arts(arts) %}
+{% macro show_flights(flights) %}
 <div class="columns is-multiline">
-  {% for art in arts %}
+  {% for flight in flights %}
   <div class="column is-half">
-    {{ show_art(art) }}
+    {{ show_flight(flight) }}
   </div>
   {% endfor %}
 </div>

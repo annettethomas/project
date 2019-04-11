@@ -2,7 +2,7 @@ import sqlite3
 import datetime
 from flask import Flask, render_template, g
 
-PATH = 'db/sqlite/bookdata.sqlite'
+PATH = 'db/sqlite/bird.sqlite'
 
 app = Flask(__name__)
 
@@ -36,10 +36,10 @@ def close_connection(exception):
 def welcome():
     return render_template('index.html')
 
-@app.route('/Art')
-def arts():
-    arts = execute_sql('SELECT * FROM arts')
-    return render_template('arts.html', arts=arts)
+@app.route('/birdwatch')
+def flights():
+    flights = execute_sql('SELECT * FROM flights')
+    return render_template('birdwatch.html', flights=flights)
 
 
 @app.route('/Comics')
