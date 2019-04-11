@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="main">
+  <center><img src="static/quote.png" alt="quote"></center>
+</div>
+<hr>
+
+<div class="row">
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <center><h5 class="card-title">Deciding what to read next?</h5></center>
+        <p class="card-text">You’re in the right place. Tell us what titles or
+          genres you’ve enjoyed in the past, and we’ll give you surprisingly
+          insightful recommendations.
+        </p>
+        <a href="#" class="btn btn-warning">View recommendations</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <center><h5 class="card-title">What are your friends reading?</h5></center>
+        <p class="card-text">Chances are your friends are discussing their
+          favorite (and least favorite) books on Goodreads.
+        </p>
+        <a href="#" class="btn btn-warning">Check friends list</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <center>
+          <h5 class="card-title">Are you an author or a publisher?</h5>
+            <p class="card-text">
+              Chances are your friends are discussing their favorite
+              (and least favorite) books on Goodreads.
+            </p>
+
+        <a href="#" class="btn btn-warning">Author program</a>
+        <a href="#" class="btn btn-warning">Advertise</a>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<hr>
+<div class="container" style="padding: 20px;">
+  <center><h2>Search and browse books 📚</h2></center>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <center><a href="/Art" class="btn btn-info">🎭 Art 🎭</a></center>
+    </div>
+    <div class="col-sm-4">
+      <center><a href="Comics" class="btn btn-info">💫 Comics 💫</a></center>
+    </div>
+  <div class="col-sm-4">
+    <center><a href="/Fantasy" class="btn btn-info">🗡️ Fantasy 🗡️</a></center>
+  </div>
+</div>
+
+
+{% endblock %}

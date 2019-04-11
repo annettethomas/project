@@ -1,0 +1,89 @@
+{% macro show_art(arts) %}
+<div class="card adjust-height">
+  <header class="card-header">
+    <div class="card-header-title">
+      <h2>{{ arts['arttitle']}} </h2>
+    </div>
+  </header>
+  <div class="card-content" style="padding: 20px;">
+    <div class="content">
+      <p>
+        <b>{{ arts['artfn'] }} {{ arts['artln']}}</b><br>
+        {{ arts['artdesc'] }}
+      </p>
+    </div>
+  </div>
+</div>
+<br>
+{% endmacro %}
+
+{% macro show_arts(arts) %}
+<div class="columns is-multiline">
+  {% for art in arts %}
+  <div class="column is-half">
+    {{ show_art(art) }}
+  </div>
+  {% endfor %}
+</div>
+{% endmacro %}
+
+
+{% macro show_comic(comics) %}
+<div class="card adjust-height">
+  <header class="card-header">
+    <div class="card-header-title">
+      <h2>{{ comics['comtitle']}} </h2>
+    </div>
+  </header>
+  <div class="card-content" style="padding: 20px;">
+    <div class="content">
+      <p>
+        <b>{{ comics['comfn'] }} {{ comics['comln']}}</b><br>
+        {{ comics['comdesc'] }}
+      </p>
+    </div>
+  </div>
+</div>
+<br>
+{% endmacro %}
+
+{% macro show_comics(comics) %}
+<div class="columns is-multiline">
+  {% for comic in comics %}
+  <div class="column is-half">
+    {{ show_comic(comic) }}
+  </div>
+  {% endfor %}
+</div>
+{% endmacro %}
+
+
+
+{% macro show_fantasy(fantasys) %}
+<div class="card adjust-height">
+  <header class="card-header">
+    <div class="card-header-title">
+      <h2>{{ fantasys['fantitle']}} </h2>
+    </div>
+  </header>
+  <div class="card-content" style="padding: 20px;">
+    <div class="content">
+      <p>
+        <b>{{ fantasys['fanfn'] }} {{ fantasys['fanln']}}</b><br>
+        {{ fantasys['fandesc'] }}
+      </p>
+    </div>
+  </div>
+</div>
+<br>
+{% endmacro %}
+
+{% macro show_fantasys(fantasys) %}
+<div class="columns is-multiline">
+  {% for fantasy in fantasys %}
+  <div class="column is-half">
+    {{ show_fantasy(fantasy) }}
+  </div>
+  {% endfor %}
+</div>
+{% endmacro %}
