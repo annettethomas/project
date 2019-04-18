@@ -1,20 +1,22 @@
 {% from '_macros.html' import show_flight, show_flights with context %}
-<!-- {% from '_macros.html' import show_comic, show_comics with context %}
-{% from '_macros.html' import show_fantasy, show_fantasys with context %} -->
+{% from '_macros.html' import show_noflight, show_noflights with context %}
+{% from '_macros.html' import show_colorful, show_colorfuls with context %}
+
 <!doctype html>
 <html>
   <head>
-    <title>Book Review Assignment</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Bird Watching</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
   </head>
   <body>
-    <div class="container top">
-      <header>
-        <a href="/index"><img src="/static/gr-logo.png" alt="good_reads"></a>
-      </header>
-      <hr>
-      {% block content %}
-      {% endblock %}
-    </div>
+      <div class="main-container">
+        <div class="container">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
   </body>
 </html>

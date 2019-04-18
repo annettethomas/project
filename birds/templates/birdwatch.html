@@ -1,5 +1,45 @@
 {% extends "layout.html" %}
 {% block content %}
-{{ show_flights(flights) }}
-<a href="/index" class="btn btn-secondary"> ⬅️ Go back home</a>
+<center><h1> Go Birdwatching </h1></center>
+<hr>
+<div class="bird-cards">
+  <div class="row">
+  <div class="col-sm-12 col-md-4 col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Flying Birds</h5>
+        <p class="card-text">
+          View these beautiful birds that are found in different places
+          of the world!
+        </p>
+        <a href="flyers" class="btn btn-primary">View Birds</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-4 col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Flightless Birds</h5>
+        <p class="card-text">
+          did you know: only about 40 bird species can't fly??
+          Check them out here!
+        </p>
+        <a href="noflyers" class="btn btn-primary">View Birds</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-4 col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Colorful Birds</h5>
+        <p class="card-text">
+          Birds come in many beautiful colors. Here are a few!
+        </p>
+        <a href="colorfuls" class="btn btn-primary">View Birds</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<a href="/index" class="btn btn-info"> ⬅️ Back to home</a>
 {% endblock %}

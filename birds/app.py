@@ -37,9 +37,27 @@ def welcome():
     return render_template('index.html')
 
 @app.route('/birdwatch')
+def birdwatch():
+    return render_template('birdwatch.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/flyers')
 def flights():
     flights = execute_sql('SELECT * FROM flights')
-    return render_template('birdwatch.html', flights=flights)
+    return render_template('flyers.html', flights=flights)
+
+@app.route('/noflyers')
+def noflights():
+    noflights = execute_sql('SELECT * FROM noflights')
+    return render_template('noflyers.html', noflights=noflights)
+
+@app.route('/colorfuls')
+def colorfuls():
+    colorfuls = execute_sql('SELECT * FROM colorfuls')
+    return render_template('colorfuls.html', colorfuls=colorfuls)
 
 
 @app.route('/Comics')

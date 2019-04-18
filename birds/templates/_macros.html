@@ -8,7 +8,7 @@
   <div class="card-content" style="padding: 20px;">
     <div class="content">
       <p>
-        <center><img src="{{ flights['img'] }}" alt="" style="height: 700px;"></center>
+        <center><img src="{{ flights['img'] }}" alt="" style="height: 500px;"></center>
         <b>Scientific Name:</b> {{ flights['sciName'] }}<br>
         <b>Phylum:</b> {{ flights['phylum']}}<br>
         <br>
@@ -32,18 +32,22 @@
 {% endmacro %}
 
 
-{% macro show_comic(comics) %}
+{% macro show_noflight(noflights) %}
 <div class="card adjust-height">
   <header class="card-header">
     <div class="card-header-title">
-      <h2>{{ comics['comtitle']}} </h2>
+      <h2>{{ noflights['birdName']}} </h2>
     </div>
   </header>
   <div class="card-content" style="padding: 20px;">
     <div class="content">
       <p>
-        <b>{{ comics['comfn'] }} {{ comics['comln']}}</b><br>
-        {{ comics['comdesc'] }}
+        <center><img src="{{ noflights['img'] }}" alt="" style="height: 500px;"></center>
+        <b>Scientific Name:</b> {{ noflights['sciName'] }}<br>
+        <b>Phylum:</b> {{ noflights['phylum']}}<br>
+        <br>
+        <b>Description:</b> {{ noflights['desc'] }}<br>
+        <b>Did you know:</b> {{ noflights['know'] }}
       </p>
     </div>
   </div>
@@ -51,30 +55,32 @@
 <br>
 {% endmacro %}
 
-{% macro show_comics(comics) %}
+{% macro show_noflights(noflights) %}
 <div class="columns is-multiline">
-  {% for comic in comics %}
+  {% for noflight in noflights %}
   <div class="column is-half">
-    {{ show_comic(comic) }}
+    {{ show_noflight(noflight) }}
   </div>
   {% endfor %}
 </div>
 {% endmacro %}
 
-
-
-{% macro show_fantasy(fantasys) %}
+{% macro show_colorful(colorfuls) %}
 <div class="card adjust-height">
   <header class="card-header">
     <div class="card-header-title">
-      <h2>{{ fantasys['fantitle']}} </h2>
+      <h2>{{ colorfuls['birdName']}} </h2>
     </div>
   </header>
   <div class="card-content" style="padding: 20px;">
     <div class="content">
       <p>
-        <b>{{ fantasys['fanfn'] }} {{ fantasys['fanln']}}</b><br>
-        {{ fantasys['fandesc'] }}
+        <center><img src="{{ colorfuls['img'] }}" alt="" style="width: 500px;"></center>
+        <b>Scientific Name:</b> {{ colorfuls['sciName'] }}<br>
+        <b>Phylum:</b> {{ colorfuls['phylum']}}<br>
+        <br>
+        <b>Description:</b> {{ colorfuls['desc'] }}<br>
+        <b>Did you know:</b> {{ colorfuls['know'] }}
       </p>
     </div>
   </div>
@@ -82,11 +88,11 @@
 <br>
 {% endmacro %}
 
-{% macro show_fantasys(fantasys) %}
+{% macro show_colorfuls(colorfuls) %}
 <div class="columns is-multiline">
-  {% for fantasy in fantasys %}
+  {% for colorful in colorfuls %}
   <div class="column is-half">
-    {{ show_fantasy(fantasy) }}
+    {{ show_colorful(colorful) }}
   </div>
   {% endfor %}
 </div>
